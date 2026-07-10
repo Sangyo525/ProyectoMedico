@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha Médica de Emergencia</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; color: #333; }
+        .card { max-width: 450px; margin: 0 auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 8px solid #d9534f; }
+        .header { text-align: center; margin-bottom: 25px; }
+        .header h1 { font-size: 20px; color: #d9534f; margin: 5px 0; font-weight: bold; }
+        .header p { font-size: 14px; color: #777; margin: 0; }
+        .campo { margin-bottom: 15px; }
+        .label { font-size: 12px; font-weight: bold; color: #555; text-transform: uppercase; margin-bottom: 5px; display: block; }
+        .valor { background-color: #f8f9fa; padding: 10px 12px; border-radius: 8px; border: 1px solid #e9ecef; font-size: 15px; font-weight: 500; }
+        .sangre { background-color: #fdf2f2; border: 1px solid #fbd5d5; color: #b82c2a; font-size: 18px; font-weight: bold; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="header">
+            <h1>🚨 HISTORIAL MÉDICO CRÍTICO</h1>
+            <p>Información de soporte vital del paciente</p>
+        </div>
+
+        <div class="campo">
+            <span class="label">Nombre Completo:</span>
+            <div class="valor">{{ paciente.nombre }}</div>
+        </div>
+
+        <div class="campo">
+            <span class="label">Número de Cédula:</span>
+            <div class="valor">{{ cedula }}</div>
+        </div>
+
+        <div class="campo">
+            <span class="label">Tipo de Sangre:</span>
+            <div class="valor sangre">{{ paciente.tipo_sangre }}</div>
+        </div>
+
+        <div class="campo">
+            <span class="label">Fecha de Nacimiento:</span>
+            <div class="valor">{{ paciente.fecha_nacimiento }}</div>
+        </div>
+
+        <div class="campo">
+            <span class="label">Alergias:</span>
+            <div class="valor" style="color: #c92a2a;">{{ paciente.alergias or 'Ninguna registrada' }}</div>
+        </div>
+
+        <div class="campo">
+            <span class="label">Enfermedades Importantes:</span>
+            <div class="valor">{{ paciente.enfermedades or 'Ninguna registrada' }}</div>
+        </div>
+
+        <div class="campo">
+            <span class="label">Contacto de Emergencia:</span>
+            <div class="valor">📞 {{ paciente.contacto_emergencia }}</div>
+        </div>
+    </div>
+
+</body>
+</html>
