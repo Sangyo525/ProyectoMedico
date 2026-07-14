@@ -5,59 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ficha Médica de Emergencia</title>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; color: #333; }
-        .card { max-width: 450px; margin: 0 auto; background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 8px solid #d9534f; }
-        .header { text-align: center; margin-bottom: 25px; }
-        .header h1 { font-size: 20px; color: #d9534f; margin: 5px 0; font-weight: bold; }
-        .header p { font-size: 14px; color: #777; margin: 0; }
-        .campo { margin-bottom: 15px; }
-        .label { font-size: 12px; font-weight: bold; color: #555; text-transform: uppercase; margin-bottom: 5px; display: block; }
-        .valor { background-color: #f8f9fa; padding: 10px 12px; border-radius: 8px; border: 1px solid #e9ecef; font-size: 15px; font-weight: 500; }
-        .sangre { background-color: #fdf2f2; border: 1px solid #fbd5d5; color: #b82c2a; font-size: 18px; font-weight: bold; text-align: center; }
+        body { font-family: Arial, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; color: #333; }
+        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); max-width: 450px; margin: auto; }
+        .header { text-align: center; border-bottom: 2px solid #e0e0e0; padding-bottom: 15px; margin-bottom: 20px; }
+        .header h1 { color: #d9534f; margin: 0; font-size: 24px; }
+        .header p { color: #777; margin: 5px 0 0 0; font-size: 14px; font-weight: bold; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 12px 8px; border-bottom: 1px solid #eee; }
+        .label { font-weight: bold; color: #555; width: 40%; }
+        .alergias { color: #d9534f; font-weight: bold; }
     </style>
 </head>
 <body>
 
     <div class="card">
         <div class="header">
-            <h1>🚨 HISTORIAL MÉDICO CRÍTICO</h1>
-            <p>Información de soporte vital del paciente</p>
+            <h1>FICHA MÉDICA DE EMERGENCY</h1>
+            <p>ID Dispositivo: {{ ficha }}</p>
         </div>
-
-        <div class="campo">
-            <span class="label">Nombre Completo:</span>
-            <div class="valor">{{ paciente.nombre }}</div>
-        </div>
-
-        <div class="campo">
-            <span class="label">Número de Cédula:</span>
-            <div class="valor">{{ cedula }}</div>
-        </div>
-
-        <div class="campo">
-            <span class="label">Tipo de Sangre:</span>
-            <div class="valor sangre">{{ paciente.tipo_sangre }}</div>
-        </div>
-
-        <div class="campo">
-            <span class="label">Fecha de Nacimiento:</span>
-            <div class="valor">{{ paciente.fecha_nacimiento }}</div>
-        </div>
-
-        <div class="campo">
-            <span class="label">Alergias:</span>
-            <div class="valor" style="color: #c92a2a;">{{ paciente.alergias or 'Ninguna registrada' }}</div>
-        </div>
-
-        <div class="campo">
-            <span class="label">Enfermedades Importantes:</span>
-            <div class="valor">{{ paciente.enfermedades or 'Ninguna registrada' }}</div>
-        </div>
-
-        <div class="campo">
-            <span class="label">Contacto de Emergencia:</span>
-            <div class="valor">📞 {{ paciente.contacto_emergencia }}</div>
-        </div>
+        
+        <table>
+            <tr>
+                <td class="label">Nombre:</td>
+                <td>{{ paciente.nombre if paciente.nombre else 'Pendiente' }}</td>
+            </tr>
+            <tr>
+                <td class="label">Cédula:</td>
+                <td>{{ paciente.cedula if paciente.cedula else 'Pendiente' }}</td>
+            </tr>
+            <tr>
+                <td class="label">Fecha de Nacimiento:</td>
+                <td>{{ paciente.fecha_nacimiento if paciente.fecha_nacimiento else 'Pendiente' }}</td>
+            </tr>
+            <tr>
+                <td class="label">Tipo de Sangre:</td>
+                <td>{{ paciente.tipo_sangre if paciente.tipo_sangre else 'Pendiente' }}</td>
+            </tr>
+            <tr>
+                <td class="label">Alergias:</td>
+                <td class="alergias">{{ paciente.alergias if paciente.alergias else 'Ninguna registrada' }}</td>
+            </tr>
+            <tr>
+                <td class="label">Enfermedades:</td>
+                <td>{{ paciente.enfermedades if paciente.enfermedades else 'Ninguna registrada' }}</td>
+            </tr>
+            <tr>
+                <td class="label">Contacto de Emergencia:</td>
+                <td>{{ paciente.contacto_emergencia if paciente.contacto_emergencia else 'Pendiente' }}</td>
+            </tr>
+        </table>
     </div>
 
 </body>

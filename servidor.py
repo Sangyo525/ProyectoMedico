@@ -2,36 +2,26 @@ from flask import Flask, render_template, request
 import json
 import os
 
-# Configuramos las rutas de forma absoluta
-base_dir = os.path.abspath(os.path.dirname(__file__))
-template_dir = os.path.join(base_dir, 'templates')
-
-app = Flask(__name__, template_folder=template_dir)
-
-DB_FILE = os.path.join(base_dir, "historial_medico.json")
+app = Flask(__name__)
 
 def cargar_datos():
-    if os.path.exists(DB_FILE):
-        with open(DB_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return {}
+    with open('historial_medico.json', 'r', encoding='utf-8') as archivo:
+        return json.load(archivo)
 
 @app.route('/paciente')
-def ver_paciente():
-    cedula = request.args.get('cedula')
-    
-    if not cedula:
-        return "Falta el número de cédula en la petición.", 400
-        
+def obtener_paciente():
+    # Ahora leemos el parámetro 'ficha' desde el enlace del QR
+    id_ficha = request.args.get('ficha')
     datos = cargar_datos()
-    paciente = datos.get(cedula)
     
-    if not paciente:
-        return "<h1>Error: Paciente no encontrado en el sistema.</h1>", 404
-        
-    return render_template('ficha.html', cedula=cedula, paciente=paciente)
+    # Buscamos si esa ficha existe en nuestra base de datos
+    paciente = datos.get(id_ficha)
+    
+    if paciente:
+        return render_template('ficha.html', paciente=paciente, ficha=id_ficha)
+    else:
+        return "<h3>Error: Código de ficha médica no registrado o inválido.</h3>", 404
 
 if __name__ == '__main__':
-    # Lee el puerto que asigne el servidor de internet o usa el 5000 por defecto
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)

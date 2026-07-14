@@ -1,18 +1,137 @@
 {
-    "1700000000": {
-        "nombre": "Martín Roberto Perez Martínez",
-        "fecha_nacimiento": "12/05/2000",
-        "tipo_sangre": "ORH+",
-        "alergias": "Penicilina",
-        "enfermedades": "Ninguna",
-        "contacto_emergencia": "Mamá - 0999999999"
-    },
-    "0130024050": {
-        "nombre": "Rodrigo de Prueba",
-        "fecha_nacimiento": "12/05/2000",
-        "tipo_sangre": "ORH+",
-        "alergias": "Penicilina",
-        "enfermedades": "Ninguna",
-        "contacto_emergencia": "Mamá - 0999999999"
-    }
+  "ficha001": {
+    "nombre": "Santiago Andre Gordillo Quiroz",
+    "cedula": "0930550918",
+    "fecha_nacimiento": "14/12/2005",
+    "tipo_sangre": "ORH+",
+    "alergias": "Ninguna",
+    "enfermedades": "Ninguna",
+    "contacto_emergencia": "Madre (Ana Q.) - 0999999999"
+  },
+  "ficha002": {
+    "nombre": "Esteban Sebastián Balseca Cruz",
+    "cedula": "0504199894",
+    "fecha_nacimiento": "10/01/2006",
+    "tipo_sangre": "ARH+",
+    "alergias": "Ninguna",
+    "enfermedades": "Ninguna",
+    "contacto_emergencia": "Madre (Sonia C.) - 0999999999"
+  },
+  "ficha003": {
+    "nombre": "Natasha Stefania Espinoza Calva",
+    "cedula": "0926296310",
+    "fecha_nacimiento": "14/12/2004",
+    "tipo_sangre": "ARH+",
+    "alergias": "Ninguna",
+    "enfermedades": "Ninguna",
+    "contacto_emergencia": "Madre (Luz C.) - 0999999999"
+  },
+  "ficha004": {
+    "nombre": "Santiago Gordillo",
+    "cedula": "1700000000",
+    "fecha_nacimiento": "12/05/2000",
+    "tipo_sangre": "ORH+",
+    "alergias": "Penicilina",
+    "enfermedades": "Ninguna",
+    "contacto_emergencia": "Mamá - 0999999999"
+  },
+  "ficha005": {
+    "nombre": "Pendiente / No asignado",
+    "cedula": "",
+    "fecha_nacimiento": "",
+    "tipo_sangre": "",
+    "alergias": "",
+    "enfermedades": "",
+    "contacto_emergencia": ""
+  },
+  "ficha006": {
+    "nombre": "Pendiente / No asignado",
+    "cedula": "",
+    "fecha_nacimiento": "",
+    "tipo_sangre": "",
+    "alergias": "",
+    "enfermedades": "",
+    "contacto_emergencia": ""
+  },
+  "ficha007": {
+    "nombre": "Santiago Gordillo",
+    "cedula": "1700000000",
+    "fecha_nacimiento": "12/05/2000",
+    "tipo_sangre": "ORH+",
+    "alergias": "Penicilina",
+    "enfermedades": "Ninguna",
+    "contacto_emergencia": "Mamá - 0999999999"
+  },
+  "ficha008": {
+    "nombre": "Pendiente / No asignado",
+    "cedula": "",
+    "fecha_nacimiento": "",
+    "tipo_sangre": "",
+    "alergias": "",
+    "enfermedades": "",
+    "contacto_emergencia": ""
+  },
+  "ficha009": {
+    "nombre": "Pendiente / No asignado",
+    "cedula": "",
+    "fecha_nacimiento": "",
+    "tipo_sangre": "",
+    "alergias": "",
+    "enfermedades": "",
+    "contacto_emergencia": ""
+  },
+  "ficha010": {
+    "nombre": "Santiago Gordillo",
+    "cedula": "1700000000",
+    "fecha_nacimiento": "12/05/2000",
+    "tipo_sangre": "ORH+",
+    "alergias": "Penicilina",
+    "enfermedades": "Ninguna",
+    "contacto_emergencia": "Mamá - 0999999999"
+  },
+  "ficha011": {
+    "nombre": "Pendiente / No asignado",
+    "cedula": "",
+    "fecha_nacimiento": "",
+    "tipo_sangre": "",
+    "alergias": "",
+    "enfermedades": "",
+    "contacto_emergencia": ""
+  },
+  "ficha012": {
+    "nombre": "Pendiente / No asignado",
+    "cedula": "",
+    "fecha_nacimiento": "",
+    "tipo_sangre": "",
+    "alergias": "",
+    "enfermedades": "",
+    "contacto_emergencia": ""
+  },
+  "ficha013": {
+    "nombre": "Santiago Gordillo",
+    "cedula": "1700000000",
+    "fecha_nacimiento": "12/05/2000",
+    "tipo_sangre": "ORH+",
+    "alergias": "Penicilina",
+    "enfermedades": "Ninguna",
+    "contacto_emergencia": "Mamá - 0999999999"
+  },
+  "ficha014": {
+    "nombre": "Pendiente / No asignado",
+    "cedula": "",
+    "fecha_nacimiento": "",
+    "tipo_sangre": "",
+    "alergias": "",
+    "enfermedades": "",
+    "contacto_emergencia": ""
+  },
+  "ficha015": {
+    "nombre": "Pendiente / No asignado",
+    "cedula": "",
+    "fecha_nacimiento": "",
+    "tipo_sangre": "",
+    "alergias": "",
+    "enfermedades": "",
+    "contacto_emergencia": ""
+  }
 }
